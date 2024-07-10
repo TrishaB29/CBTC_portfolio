@@ -1,121 +1,153 @@
-body{
-    background-color: rgb(8, 1, 1);
-    color: aliceblue;
-    font-family: 'Poppins', 'sans-serif';
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
-*{
-    padding: 0;
-    margin: 0;
+
+body {
+   background-color: rgba(0, 0, 33, 0.458);
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   min-height: 100vh;
 }
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    background-color:  rgb(12, 12, 72);
+
+header {
+   font-size: 1rem;
 }
-nav ul{
-    display: flex;
-    justify-content: center;
+
+header, 
+form {
+   min-height: 20vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-nav li{
-    list-style: none;
-    margin: 0 24px;
+
+form input, 
+form button {
+   padding: 0.5rem;
+   padding-left: 1rem;
+   font-size: 1.8rem;
+   border: none;
+   background: white;
+   border-radius: 2rem;
 }
-nav ul li a{
-    color: whitesmoke;
-    text-decoration: none;
+
+form button {
+   color:black;
+   background:whitesmoke;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin-left: 0.5rem;
 }
-nav ul li a:hover{
-    color: rgb(198, 109, 219);
-    font-size: 1.2rem;
+
+form button:hover {
+   transform: rotate(360deg);
+   scale: 1.1;
 }
-.left{
-    font-size: 1.5rem;
+
+.fa-plus-circle {
+   margin-top: 0.3rem;
+   margin-left: -8px;
 }
-.first{
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0px;
-} 
-.first> div{
-    width: 30%;
+
+.todo-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.leftSection{
-    color: azure;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 100px;
+
+.todo-list {
+   min-width: 30%;
+   list-style: none;
 }
-.rightSection{
-    margin: 70px;
+
+.todo {
+   margin: 0.5rem;
+   padding-left: 0.5rem;
+   background: white;
+   color: black;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: 0.5s;
+   border-radius: 2rem;
 }
-.pink{
-    color: rgb(215, 17, 109);
+
+.todo li {
+   flex: 1;
 }
-#element{
-    color: rgb(161, 82, 190);
+
+.trash-btn, 
+.complete-btn {
+   color: white;
+   border: none;
+   padding: 1rem;
+   cursor: pointer;
+   font-size: 1.5rem;
 }
-.second{
-    max-width: 80px;
-    padding-left: 220px;
-    padding-bottom: 40px;
+
+.complete-btn {
+   background: green;
 }
-main hr{
-    border: 0;
-    background: #9c97f1;
-    height: 1.2px;
-    margin: 40px 84px;
+
+.trash-btn {
+   border-top-right-radius: 1.75rem;
+   border-bottom-right-radius: 1.75rem;
+   background: red;
 }
-.second h1{
-    max-width: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.7rem;
-    padding-top: 20px;
+
+.todo-item {
+   padding: 0rem 0.5rem;
 }
-.marquee{
-    background-color: white;
-    animation: marquee 40s linear infinite;
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    will-change: transform;
+
+.fa-trash, 
+.fa-check-circle {
+   pointer-events: none;
 }
-@keyframes marquee{
-    0%{
-        transform: translateX(0);
-        
-    }
-    100%{
-        transform: translateX(-100%);
-    }
+
+.completed {
+   text-decoration: line-through;
+   opacity: 0.5;
 }
-.left-column{
-    padding-left: 230px;
-    flex: 1;;
+
+.slide {
+   transform: translateX(10rem);
+   opacity: 0;
 }
-.right-column{
-    padding-left: 230px;
-    flex: 1;
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   outline: none;
+   border: none;
 }
-.skillsContainer h2{
-    padding-left: 220px;
+
+.select {
+   margin: 1rem;
+   position: relative;
+   overflow: hidden;
+   border-radius: 50px;
 }
-.skillsContainer{
-    display: flex;
+
+select {
+   color: rgb(107, 107, 139);
+   width: 10rem;
+   height: 3.2rem;
+   cursor: pointer;
+   padding: 1rem;
 }
-.work{
-    padding-left: 230px;
+
+.select::after {
+   content: "\25BC";
+   position: absolute;
+   background:rgb(34, 34, 45);
+   top: 0;
+   right: 0;
+   padding: 1rem;
+   pointer-events: none;
+   transition: all 0.3s ease;
 }
-.internships{
-    display: flex;
-    gap: 140px;
-}
-.resume{
-    padding-left: 230px;
-    padding-top: 30px;
-}
-.another{
-    padding-left: 230px;
-}
+
